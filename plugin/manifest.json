@@ -1,0 +1,17 @@
+{
+    "name": "Google Bangs",
+    "version": "1.0",
+    "description": "An extension to add duckduckgo bangs to google searches",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://www.google.com/search?q=*"
+    ],
+    "icons": {
+        "256": "icon.png"
+    },
+    "manifest_version": 2
+}
