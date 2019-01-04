@@ -1,14 +1,13 @@
-window.onload = function(){
-var form = document.getElementById("search-form")
-form.onsubmit= function() {
-var search = document.getElementById("query").value;
-chrome.runtime.sendMessage({srch: search}, function(response){
-});
-}
+window.onload = function() {
+    var form = document.getElementById("search-form")
+    form.onsubmit = function() {
+        check_for_bang(getsearch());
+    }
 
-var search = document.getElementById("query").value;
-chrome.runtime.sendMessage({srch: search}, function(response){
-});
+    check_for_bang(getsearch());
 
 }
 
+function getsearch() {
+    return document.getElementById("query").value;
+}

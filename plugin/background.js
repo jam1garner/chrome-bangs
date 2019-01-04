@@ -6,7 +6,9 @@ chrome.webRequest.onBeforeRequest.addListener(
         console.log(search)
         if (search[0] == "!") {
             console.log("Is probably a bang");
-	chrome.runtime.sendMessage({srch: search});
+            bang({
+                srch: search.replace("%20", " ")
+            });
         }
     },
     // filters
