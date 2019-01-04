@@ -23,7 +23,8 @@
 	"tabs",
         "webRequestBlocking",
 	"https://duckduckgo.com/bang_lite.html",
-        "https://*.google.com/search*"
+        "https://*.google*/search*",
+	"https://*.startpage.com/do/dsearch*"
     ],
     "icons": {
         "256": "icon.png"
