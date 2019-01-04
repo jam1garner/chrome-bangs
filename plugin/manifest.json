@@ -3,12 +3,20 @@
     "version": "1.0",
     "description": "An extension to add duckduckgo bangs to google searches",
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["background.js", "bang.js"]
     },
+     "content_scripts": [
+   {
+     "matches": ["https://*.startpage.com/*"],
+     "js": ["startpage.js"]
+   }
+ ],
     "permissions": [
         "webRequest",
+	"tabs",
         "webRequestBlocking",
-        "https://www.google.com/search?q=*"
+	"https://duckduckgo.com/bang_lite.html",
+        "https://*.google.com/search*"
     ],
     "icons": {
         "256": "icon.png"

@@ -6,13 +6,13 @@ chrome.webRequest.onBeforeRequest.addListener(
         console.log(search)
         if (search[0] == "!") {
             console.log("Is probably a bang");
-            return { redirectUrl: "https://www.duckduckgo.com/?q=" + search }
+	chrome.runtime.sendMessage({srch: search});
         }
     },
     // filters
     {
         urls: [
-            "https://www.google.com/search?q=*"
+            "https://www.google.com/search?*"
         ]
     },
     // extraInfoSpec
