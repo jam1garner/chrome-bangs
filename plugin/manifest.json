@@ -1,7 +1,7 @@
 {
     "name": "Google Bangs",
     "version": "1.0",
-    "description": "An extension to add duckduckgo bangs to google searches",
+    "description": "An extension to add duckduckgo bangs to google and startpage searches",
     "background": {
         "scripts": ["background.js", "bang.js"]
     },
@@ -23,11 +23,12 @@
 	"tabs",
         "webRequestBlocking",
 	"https://duckduckgo.com/bang_lite.html",
-        "https://*.google*/search*",
+        "https://*.google.com/search*",
 	"https://*.startpage.com/do/dsearch*"
     ],
     "icons": {
         "256": "icon.png"
     },
+
     "manifest_version": 2
 }

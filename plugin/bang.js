@@ -10,7 +10,6 @@ function bang(request) {
             if (this.readyState == 4 && this.status == 200) {
                 var response = xhttp.response;
                 var search = request.srch;
-                console.log(search);
                 var bang = search.split(" ")[0];
 
                 // var regex= (?:\()?(?:\+bang+)(?:\))?(?:\<br\>)?(?:);
