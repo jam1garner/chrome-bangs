@@ -1,8 +1,15 @@
 window.onload = function() {
-    console.log("google.js loaded");
+    if (window.location.href.indexOf("/search?q=") != -1){
+        console.log("is search");
+        var search = window.location.href.substring(
+            window.location.href.indexOf("/search?q=") + "/search?q=".length
+        ).split('&')[0];
+        console.log(decodeURIComponent(search).replace("+", " "));
+        check_for_bang(decodeURIComponent(search).replace("+", " "));
+    }
     var form = document.getElementById("tsf");
     form.onsubmit = function() {
-        console.log("search");
+        //console.log("search");
         check_for_bang(getsearch());
     }
     var button = document.getElementsByClassName("Tg7LZd")[0];

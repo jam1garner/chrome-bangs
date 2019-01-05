@@ -6,7 +6,7 @@ function bang(request) {
     if (request.srch != null && request.srch != "") {
 
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        xhttp.onload = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var response = xhttp.response;
                 var search = request.srch;
