@@ -7,12 +7,12 @@ window.onload = function() {
         console.log(decodeURIComponent(search).replace("+", " "));
         check_for_bang(decodeURIComponent(search).replace("+", " "));
     }
-    var form = document.getElementById("tsf");
+    var form = document.getElementById("sb_form");
     form.onsubmit = function() {
         //console.log("search");
         check_for_bang(getsearch());
     }
-    var button = document.getElementsByClassName("Tg7LZd")[0];
+    var button = document.getElementsByClassName("b_searchboxSubmit")[0];
     if (button != null) {
         button.setAttribute("type", "button"),
             button.addEventListener("click", function() {
@@ -25,3 +25,4 @@ window.onload = function() {
 function getsearch() {
     return document.getElementsByName("q")[0].value;
 }
+
